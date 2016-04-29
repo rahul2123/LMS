@@ -1,0 +1,29 @@
+{% extends "layouts/default.html" %}
+{% block content %}
+	<div class="wrapper">
+		<div class="inbox container">
+			<h1 class="text-center">Inbox</h1>
+			<div class="row">
+				<div class="col-md-12">
+					{% for notification in notifications.notification_status %}
+						<p>{{notification.title}}</p>
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+<table class="table table-bordered">
+	<tr>
+		<th>Title</th>
+		<th>Status</th>
+	</tr>
+	{% for notification in notifications.notification_status %}
+		<a href="/" title="">
+			<tr class="{% if (notification.status == false) %} unread {% endif %}">
+			<td>{{notification.title}}</td>
+			<td>{{notification.status}}</td>
+		</tr>
+	</a>
+{% endfor %}
+</table>

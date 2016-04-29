@@ -1,0 +1,18 @@
+{
+  "name": "lms-test",
+  "version": "0.0.1",
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "body-parser": "^1.15.0",
+    "built.io": "^2.1.6",
+    "connect-redis": "^3.0.2",
+    "contentstack-express": "^1.0.0",
+    "express-session": "^1.13.0",
+    "lodash": "^4.11.1",
+    "q": "^1.4.1",
+    "redis": "^2.6.0-1"
+  },
+  "scripts": {
+    "start": "node app.js"
+  }
+}

@@ -1,0 +1,42 @@
+body,html{
+	height: 100%;
+}
+.unread{
+	font-weight: bold;
+}
+.wrapper{
+	margin-top: 50px;
+}
+.register-form {
+	min-height: 100%;
+	display: flex;
+	justify-content: center;
+  align-items: center;
+}
+.resources progress {
+	width: 100%;
+}
+
+.resources .table>tbody>tr>td {
+	vertical-align: middle;
+}
+.resources .uploadbtn {
+	border: none;
+	box-shadow: none;
+}
+.resources .glyphicon-upload {
+	color: #5cb85c;
+}
+.resources .glyphicon-remove {
+	color: #c9302c;
+}
+.resources h2 {
+	margin-top: 0;
+}
+.resources a {
+	color: #000;
+	text-decoration: none;
+}
+.padding0 {
+	padding: 0;
+}
