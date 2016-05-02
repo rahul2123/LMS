@@ -1,0 +1,10 @@
+// {
+//   "VARIABLE": {
+//     "lib": "./lib",
+//     "built": "{lib}/built-interact.js",
+//     "session": "{lib}/session.js"
+//   },
+//   "GET": {
+//     "/": "{session}:checksession"
+//   }
+// }

@@ -55,19 +55,31 @@ module.exports = function Routes() {
                 })
         })
 
+        app.get('/inbox', function(req, res) {
+            console.log('------------------ req.session.user_uid', req.session.user_id)
+            built.getusernotifications(req.session.user_id)
+                .then(function(notifications) {
+                    // console.log('notifications',JSON.stringify(notifications[0]))
+                    res.render('pages/temp/inbox', {
+                        notifications: notifications[0]
+                    })
+                })
+        })
         app.get('/user', function(req, res) {
             res.render('pages/temp/homepage', {
                 user: req.session
             })
         })
-        app.get('/inbox', function(req, res) {
-            built.getusernotifications(req.session.user_uid)
-                .then(function(notifications) {
-                    res.render('pages/temp/inbox', {    
-                        notifications : notifications[0]
+        app.get('/inbox/:notid', function(req, res) {
+            var notid = req.params.notid
+            built.getSingleNotification(notid)
+                .then(function(notification) {
+                    console.log('completed')
+                    res.render('pages/temp/singlenotification', {
+                        notification: notification[0]
                     })
                 })
-
+            built.setread(req.session.user_uid, notid)
         })
     };
     Routes.beforePublish = function(data, next) {
