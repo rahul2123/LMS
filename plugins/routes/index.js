@@ -1,8 +1,9 @@
 "use strict";
 var contentstack = require('contentstack-express');
 var Built = require('built.io')
-    // var multiparty = require('multiparty')
+var Stack = contentstack.Stack()
 var util = require('util')
+var built = require(process.cwd() + '/lib/built-interact')
 
 module.exports = function Routes() {
 
@@ -10,8 +11,6 @@ module.exports = function Routes() {
     var options = Routes.options;
     Routes.templateExtends = function(engine) {};
     Routes.serverExtends = function(app) {
-        var built = require(process.cwd() + '/lib/built-interact')
-            // var cms = require(process.cwd() + '/lib/contentstack-interact')
         app.get('*', function(req, res, next) {
             console.log('============================================')
             console.log('===========', req.session.user, '===========')
@@ -26,8 +25,17 @@ module.exports = function Routes() {
             }
         })
 
-        app.get('/courses', function(req, res) {
-            res.send(req.session)
+        app.extends().get('/courses', function(req, res, next) {
+            var Query = Stack.ContentType('courses').Query();
+            Query
+                .find()
+                .then(function success(result) {
+                    req.getViewContext().set('courses', result)
+                    next()
+                }, function error(err) {
+                    res.send(err)
+                });
+
         })
 
         app.post('/login', function(req, res) {
@@ -37,7 +45,7 @@ module.exports = function Routes() {
                     req.session.authtoken = user.authtoken
                     req.session.user_id = user.uid
                     res.cookie('lmsauthtoken', user.authtoken)
-                    res.redirect('/user')
+                    res.redirect('/courses')
                 })
         })
 
