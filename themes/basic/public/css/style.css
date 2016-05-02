@@ -1,5 +1,10 @@
 body,html{
 	height: 100%;
+	/*background:url('/static/images/login-lmsbg.png') no-repeat;*/
+	/*background:url('/static/images/1.png') no-repeat;*/
+	background:url('/static/images/2.png') no-repeat;
+	/*background: #4f545d;*/
+	background-size: cover;
 }
 .inbox a :hover{
 	background-color :#c6c6c6; 
@@ -16,10 +21,69 @@ body,html{
 	justify-content: center;
   align-items: center;
 }
+.outer-box {
+	border: 1px solid #eee;
+	padding: 20px 50px 50px;
+	border-radius: 5px;
+	background: #f6f6f6;
+	min-width: 450px;
+	position: relative;
+	box-shadow: 1px 0px 20px -2px #ccc;
+}
+.outer-box hr {
+	margin: 0 auto 20px;
+	width: 25%;
+	border: 2px solid #999;
+	border-radius: 5px;
+}
+.outer-box hr:before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  width: 14%;
+  margin: 0 auto; 
+  border-radius: 10px;
+  border-left: 22px solid rgba(255,255,255,0.71);
+  border-right: 22px solid rgba(255,255,255,0.71);
+  border-top: 80px solid rgba(255,255,255,0.71);
+  transform: translate(0%, 0%);
+  box-shadow: 0px -3px 0px #252424;
+}
+.outer-box hr:after {
+	content: "";
+  position: absolute;
+  top: -75px;
+  left: 0;
+  right: 0;
+  width: 14%;
+  margin: 0 auto; 
+  border-radius: 10px;
+	border-left: 22px solid rgba(255,255,255,0.71);
+  border-right: 22px solid rgba(255,255,255,0.71);
+  border-top: 80px solid rgba(255,255,255,0.71);
+  transform: translate(0%, 0%);
+  box-shadow: inset 0px -3px 0px #252424;
+}
+.outer-box .circle-img {
+	position: absolute;
+	left: 0;
+	top: -36px;
+  border: 5px solid #d8d9da;
+  border-radius: 50px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  margin: 0 auto;
+  outline: none;
+  background: #4f545d;
+
+}
 .resources progress {
 	width: 100%;
 }
-
 .resources .table>tbody>tr>td {
 	vertical-align: middle;
 }
@@ -42,4 +106,40 @@ body,html{
 }
 .padding0 {
 	padding: 0;
+}
+.box {
+	position: relative;
+	margin: 0;
+	/*border: 1px solid #ccc;*/
+}
+.box input:nth-of-type(1) {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+.box input:nth-of-type(2) {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.box i {
+	position: absolute;
+	left: 10px;
+	top: 18px;
+}
+.box i.flaticon-lock {
+	top: 75px;
+}
+.box input {
+	text-indent: 25px;
+	clear: both;
+	height: 60px;
+	border-radius: 0;
+	box-shadow: none;
+	/*padding: 20px 12px;*/
+}
+.form-control:focus {
+	box-shadow: none;
+}
+.icon:before {
+	margin-left: 0;
 }

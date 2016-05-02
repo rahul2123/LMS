@@ -1,0 +1,19 @@
+.custom-btn {
+	border-radius: 5px;
+	outline: none;
+	width: 100%;
+	padding: 15px 12px;
+	font-size: 24px;
+	color: #fff;
+	margin-top: 15px;
+	text-shadow: 2px 2px 2px #ccc;
+}
+.custom-btn.focus, .custom-btn:focus, .custom-btn:hover, .custom-btn:active:focus {
+	outline: none;
+	box-shadow: none;
+	color: #fff;
+	background: linear-gradient(#61cdc0, #41b4a1);
+}
+.custom-btn-primary {
+	background: linear-gradient(#61cdc0, #41b4a1);
+}
