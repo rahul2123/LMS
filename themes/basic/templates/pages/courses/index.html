@@ -1,0 +1,10 @@
+{% extends 'layouts/default.html' %}
+{% block content %}
+{% set course = entry %}
+	<div class="courses">
+		<h1>{{course.title}}</h1>
+		<div>
+			{{course.description}}
+		</div>
+	</div>
+{% endblock %}

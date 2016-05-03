@@ -1,4 +1,17 @@
 {% extends 'layouts/default.html' %}
 {% block content %}
-{{courses | dump}}
+	<div class="container">
+		<div class="courses">
+			<div class="row">
+				{% for course in courses%}
+					<div class="col-md-3">
+						<div>
+							<a href="{{course.url}}" title="">
+							{{course.title}} </a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 {% endblock %}
