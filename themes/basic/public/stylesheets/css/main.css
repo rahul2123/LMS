@@ -156,8 +156,6 @@ html {
           text-transform: capitalize; }
         .courses .row .card .card-body p {
           margin: 0; }
-      .courses .row .card:hover {
-        box-shadow: 1px 1px 1px 4px rgba(204, 204, 204, 0.5); }
   .courses .left-panel {
     border: 1px solid #ccc;
     position: fixed;
@@ -179,12 +177,16 @@ html {
           text-decoration: none;
           display: block;
           color: #000; }
+          .courses .left-panel ul li a span.count {
+            display: inline-block;
+            border-radius: 50px;
+            padding: 2px 5px;
+            float: right;
+            background: #d9534f;
+            color: #fff;
+            font-weight: bold; }
         .courses .left-panel ul li:hover {
           background: #ccc; }
-        .courses .left-panel ul li:before {
-          content: "\203A";
-          position: absolute;
-          right: 15px; }
 
 /* main menu css */
 .main-menu {
