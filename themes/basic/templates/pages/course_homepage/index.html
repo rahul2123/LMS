@@ -1,16 +1,40 @@
 {% extends 'layouts/default.html' %}
 {% block content %}
-	<div class="container">
-		<div class="courses">
+	<div class="courses">
+		<div class="cust-container">
 			<div class="row">
 				{% for course in courses%}
-					<div class="col-md-3">
-						<div>
+					<div class="col-md-3 col-sm-3 col-xs-12">
+						<div class="card">
 							<a href="{{course.url}}" title="">
-							{{course.title}} </a>
+								<div class="card-header">
+									<img src="../static/images/login-lmsbg.png">
+								</div>
+								<div class="card-body">
+									<h3>{{course.title}}</h3>
+									<p>Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
+									Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum</p>
+								</div>
+								<div class="card-footer">
+									<!-- is availabe -->
+								</div>
+							</a>
 						</div>
 					</div>
 				{% endfor %}
+			</div>
+			<div class="left-panel">
+				<ul>
+					<li>
+						<a href="javascript:void(0)">Home</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">About</a>
+					</li>
+					<li>
+						<a href="javascript:void(0)">Home</a>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>

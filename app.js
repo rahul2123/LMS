@@ -39,7 +39,7 @@ function checksession(req, res, next) {
 
 function checkadmin(req, res, next) {
     console.log('req.url', req.url)
-    if (req.session.user === 'admin' || req.url == '/login' || req.url == '/super-admin-login') {
+    if (req && req.session && req.session.user === 'admin' || req.url == '/login' || req.url == '/super-admin-login') {
         next()
     } else if (req.session.user === 'admin' && req.url == '/') {
         res.redirect('/admin/notifications')
