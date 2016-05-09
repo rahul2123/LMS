@@ -159,7 +159,7 @@ html {
 	}
 }
 .courses {
-	padding: 0 250px;
+	padding: 80px 250px 0;
 	position: relative;
 	.cust-container {
 		margin: 0 auto;
@@ -196,7 +196,7 @@ html {
 				}
 			}
 			&:hover {
-				box-shadow: 1px 3px 1px 3px rgba(204, 204, 204, 0.5);
+				box-shadow: 1px 1px 1px 4px rgba(204, 204, 204, 0.5);
 			}
 		}
 	}
@@ -204,7 +204,7 @@ html {
 		border: 1px solid #ccc;
 		position: fixed;
 		left: 0;
-		top: 0;
+		top: 50px;
 		height: auto;
 		min-height: 100%;
 		width: 200px;
@@ -214,7 +214,7 @@ html {
 			padding: 0;
 			li {
 				display: inline-block;
-				padding: 5px;
+				padding: 10px 5px;
 				width: 100%;
 				position: relative;
 				a{
@@ -230,6 +230,35 @@ html {
 					position: absolute;
 					right: 15px;
 				}
+			}
+		}
+	}
+}
+/* main menu css */
+.main-menu {
+	z-index: 99;
+	background: #f6f6f6;
+	border-radius: 0px;
+	border: none;
+	box-shadow: 0 1px 6px #B9B1B1;
+	.navbar-header {
+		a.navbar-brand {
+			color: #000;
+		}
+		&:hover {
+			color: #000;
+		}
+	}
+	.navbar-nav {
+		margin-top: 0;
+		margin-bottom: 0;
+		margin-right: 15px;
+		li {
+			a {
+				color: #000;
+			}
+			&:hover {
+				background: #9d9d9d;
 			}
 		}
 	}

@@ -1,0 +1,306 @@
+/* line 1, ../sass/components/_layout.scss */
+body {
+  height: 100%;
+}
+
+/* line 4, ../sass/components/_layout.scss */
+html {
+  height: 100%;
+}
+
+/* line 7, ../sass/components/_layout.scss */
+.login {
+  background: url("/static/images/2.png") no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+/* line 14, ../sass/components/_layout.scss */
+.inbox a:hover {
+  background-color: #c6c6c6;
+}
+
+/* line 19, ../sass/components/_layout.scss */
+.unread {
+  font-weight: bold;
+}
+
+/* line 22, ../sass/components/_layout.scss */
+.wrapper {
+  margin-top: 50px;
+}
+
+/* line 25, ../sass/components/_layout.scss */
+.register-form {
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* line 31, ../sass/components/_layout.scss */
+.outer-box {
+  border: 1px solid #eee;
+  padding: 20px 50px 50px;
+  border-radius: 5px;
+  background: #f6f6f6;
+  min-width: 450px;
+  position: relative;
+  box-shadow: 1px 0px 20px -2px #ccc;
+}
+/* line 39, ../sass/components/_layout.scss */
+.outer-box hr {
+  margin: 0 auto 20px;
+  width: 25%;
+  border: 2px solid #999;
+  border-radius: 5px;
+}
+/* line 44, ../sass/components/_layout.scss */
+.outer-box hr:before {
+  content: "";
+  position: absolute;
+  top: -60px;
+  left: 0;
+  right: 0;
+  width: 14%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-left: 22px solid rgba(255, 255, 255, 0.71);
+  border-right: 22px solid rgba(255, 255, 255, 0.71);
+  border-top: 80px solid rgba(255, 255, 255, 0.71);
+  transform: translate(0%, 0%);
+  box-shadow: 0px -3px 0px #252424;
+}
+/* line 59, ../sass/components/_layout.scss */
+.outer-box hr:after {
+  content: "";
+  position: absolute;
+  top: -75px;
+  left: 0;
+  right: 0;
+  width: 14%;
+  margin: 0 auto;
+  border-radius: 10px;
+  border-left: 22px solid rgba(255, 255, 255, 0.71);
+  border-right: 22px solid rgba(255, 255, 255, 0.71);
+  border-top: 80px solid rgba(255, 255, 255, 0.71);
+  transform: translate(0%, 0%);
+  box-shadow: inset 0px -3px 0px #252424;
+}
+/* line 75, ../sass/components/_layout.scss */
+.outer-box .circle-img {
+  position: absolute;
+  left: 0;
+  top: -36px;
+  border: 5px solid #d8d9da;
+  border-radius: 50px;
+  display: block;
+  width: 20px;
+  height: 20px;
+  right: 0;
+  margin: 0 auto;
+  outline: none;
+  background: #4f545d;
+}
+
+/* line 91, ../sass/components/_layout.scss */
+.resources progress {
+  width: 100%;
+}
+/* line 97, ../sass/components/_layout.scss */
+.resources .table > tbody > tr > td {
+  vertical-align: middle;
+}
+/* line 103, ../sass/components/_layout.scss */
+.resources .uploadbtn {
+  border: none;
+  box-shadow: none;
+}
+/* line 107, ../sass/components/_layout.scss */
+.resources .glyphicon-upload {
+  color: #5cb85c;
+}
+/* line 110, ../sass/components/_layout.scss */
+.resources .glyphicon-remove {
+  color: #c9302c;
+}
+/* line 113, ../sass/components/_layout.scss */
+.resources h2 {
+  margin-top: 0;
+}
+/* line 116, ../sass/components/_layout.scss */
+.resources a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 121, ../sass/components/_layout.scss */
+.padding0 {
+  padding: 0;
+}
+
+/* line 124, ../sass/components/_layout.scss */
+.box {
+  position: relative;
+  margin: 0;
+}
+/* line 127, ../sass/components/_layout.scss */
+.box input {
+  text-indent: 25px;
+  clear: both;
+  height: 60px;
+  border-radius: 0;
+  box-shadow: none;
+}
+/* line 128, ../sass/components/_layout.scss */
+.box input:nth-of-type(1) {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+/* line 132, ../sass/components/_layout.scss */
+.box input:nth-of-type(2) {
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+/* line 142, ../sass/components/_layout.scss */
+.box i {
+  position: absolute;
+  left: 10px;
+  top: 18px;
+}
+/* line 147, ../sass/components/_layout.scss */
+.box i.flaticon-lock {
+  top: 75px;
+}
+
+/* line 152, ../sass/components/_layout.scss */
+.form-control:focus {
+  box-shadow: none;
+}
+
+/* line 157, ../sass/components/_layout.scss */
+.icon:before {
+  margin-left: 0;
+}
+
+/* line 161, ../sass/components/_layout.scss */
+.courses {
+  padding: 0 250px;
+  position: relative;
+  border: 1px solid red;
+}
+/* line 165, ../sass/components/_layout.scss */
+.courses .cust-container {
+  margin: 0 auto;
+  width: 970px;
+  max-width: 100%;
+}
+/* line 170, ../sass/components/_layout.scss */
+.courses .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+/* line 173, ../sass/components/_layout.scss */
+.courses .row .card {
+  position: relative;
+  border: 1px solid rgba(204, 204, 204, 0.8);
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+/* line 178, ../sass/components/_layout.scss */
+.courses .row .card a {
+  text-decoration: none;
+  color: #000;
+}
+/* line 183, ../sass/components/_layout.scss */
+.courses .row .card .card-header img {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+/* line 189, ../sass/components/_layout.scss */
+.courses .row .card .card-body {
+  padding: 5px;
+}
+/* line 191, ../sass/components/_layout.scss */
+.courses .row .card .card-body h3 {
+  margin: 0 0 10px 0;
+  text-transform: capitalize;
+}
+/* line 195, ../sass/components/_layout.scss */
+.courses .row .card .card-body p {
+  margin: 0;
+}
+/* line 199, ../sass/components/_layout.scss */
+.courses .row .card:hover {
+  box-shadow: 1px 3px 1px 3px rgba(204, 204, 204, 0.5);
+}
+/* line 204, ../sass/components/_layout.scss */
+.courses .left-panel {
+  border: 1px solid #ccc;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: auto;
+  min-height: 100%;
+  width: 200px;
+  background: #f6f6f6;
+}
+/* line 213, ../sass/components/_layout.scss */
+.courses .left-panel ul {
+  margin: 0;
+  padding: 0;
+}
+/* line 216, ../sass/components/_layout.scss */
+.courses .left-panel ul li {
+  display: inline-block;
+  padding: 5px;
+  width: 100%;
+  position: relative;
+}
+/* line 221, ../sass/components/_layout.scss */
+.courses .left-panel ul li a {
+  text-decoration: none;
+  display: block;
+  color: #000;
+}
+/* line 226, ../sass/components/_layout.scss */
+.courses .left-panel ul li:hover {
+  background: #ccc;
+}
+/* line 229, ../sass/components/_layout.scss */
+.courses .left-panel ul li:before {
+  content: "\203A";
+  position: absolute;
+  right: 15px;
+}
+
+/* main menu css */
+/* line 239, ../sass/components/_layout.scss */
+.main-menu {
+  position: relative;
+  z-index: 99;
+}
+
+@media screen and (max-width: 1440px) {
+  /* line 2, ../sass/components/_responsive.scss */
+  .courses {
+    padding-right: 20px;
+  }
+}
+@media screen and (max-width: 767px) {
+  /* line 7, ../sass/components/_responsive.scss */
+  .environment {
+    border: none;
+  }
+  /* line 9, ../sass/components/_responsive.scss */
+  .environment .table-bordered {
+    border: 1px solid #ddd;
+  }
+}
+@media screen and (max-width: 480px) {
+  /* line 15, ../sass/components/_responsive.scss */
+  .outer-box {
+    min-width: 100%;
+  }
+}
