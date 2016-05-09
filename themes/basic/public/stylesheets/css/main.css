@@ -184,7 +184,8 @@ html {
             float: right;
             background: #d9534f;
             color: #fff;
-            font-weight: bold; }
+            font-weight: bold;
+            display: none; }
         .courses .left-panel ul li:hover {
           background: #ccc; }
 
