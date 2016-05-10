@@ -15,17 +15,3 @@
 		</div>
 	</div>
 {% endblock %}
-<table class="table table-bordered">
-	<tr>
-		<th>Title</th>
-		<th>Status</th>
-	</tr>
-	{% for notification in notifications.notification_status %}
-		<a href="/" title="">
-			<tr class="{% if (notification.status == false) %} unread {% endif %}">
-			<td>{{notification.title}}</td>
-			<td>{{notification.status}}</td>
-		</tr>
-	</a>
-{% endfor %}
-</table>

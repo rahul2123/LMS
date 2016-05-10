@@ -12,8 +12,7 @@
 								</div>
 								<div class="card-body">
 									<h3>{{course.title}}</h3>
-									<p>Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum
-									Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum Lorem ipsum lorem ipsum</p>
+									<p>{{course.description | truncate(150,true)}}</p>
 								</div>
 								<div class="card-footer">
 									<!-- is availabe -->
@@ -26,13 +25,7 @@
 			<div class="left-panel">
 				<ul>
 					<li>
-						<a href="javascript:void(0)">Home</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)">About</a>
-					</li>
-					<li>
-						<a href="javascript:void(0)">Home</a>
+						<a href="javascript:void(0)">Notifications <span class="count"></span></a>
 					</li>
 				</ul>
 			</div>
