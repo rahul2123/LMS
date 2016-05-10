@@ -162,6 +162,7 @@ html {
 	padding: 80px 250px 0;
 	position: relative;
 	background:#F4F4F4;
+	min-height: 100%;
 	.cust-container {
 		margin: 0 auto;
 		width: 970px;
@@ -231,20 +232,21 @@ html {
 				padding: 10px 5px;
 				width: 100%;
 				position: relative;
+				background: #ddd;
 				a{
 					text-decoration: none;
 					display: block;
 					color: #000;
-					span.count {
-						display: inline-block;
-				    border-radius: 50px;
-				    padding: 2px 5px;
-				    float: right;
-				    background: #d9534f;
-				    color: #fff;
-				    font-weight: bold;
-				    display: none;
-					}
+					// span.count {
+					// 	display: inline-block;
+				 //    border-radius: 50px;
+				 //    padding: 2px 5px;
+				 //    float: right;
+				 //    background: #d9534f;
+				 //    color: #fff;
+				 //    font-weight: bold;
+				 //    display: none;
+					// }
 				}
 				&:hover {
 					background: #ccc;
@@ -254,6 +256,27 @@ html {
 					// position: absolute;
 					// right: 15px;
 				}
+			}
+			.unread {
+				font-weight: bold;
+				background: #fff;
+			}
+		}
+		h1 {
+			font-size: 20px;
+			padding: 16px 5px;
+			margin: 0;
+			border-bottom: 2px solid #ddd;
+			span.count {
+				display: inline-block;
+		    border-radius: 50px;
+		    padding: 5px;
+		    float: right;
+		    background: #d9534f;
+		    color: #fff;
+		    font-size: 14px;
+		    font-weight: bold;
+		    display: none;
 			}
 		}
 	}

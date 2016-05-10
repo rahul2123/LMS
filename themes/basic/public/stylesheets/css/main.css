@@ -130,7 +130,8 @@ html {
 .courses {
   padding: 80px 250px 0;
   position: relative;
-  background: #F4F4F4; }
+  background: #F4F4F4;
+  min-height: 100%; }
   .courses .cust-container {
     margin: 0 auto;
     width: 970px;
@@ -175,22 +176,32 @@ html {
         display: inline-block;
         padding: 10px 5px;
         width: 100%;
-        position: relative; }
+        position: relative;
+        background: #ddd; }
         .courses .left-panel ul li a {
           text-decoration: none;
           display: block;
           color: #000; }
-          .courses .left-panel ul li a span.count {
-            display: inline-block;
-            border-radius: 50px;
-            padding: 2px 5px;
-            float: right;
-            background: #d9534f;
-            color: #fff;
-            font-weight: bold;
-            display: none; }
         .courses .left-panel ul li:hover {
           background: #ccc; }
+      .courses .left-panel ul .unread {
+        font-weight: bold;
+        background: #fff; }
+    .courses .left-panel h1 {
+      font-size: 20px;
+      padding: 16px 5px;
+      margin: 0;
+      border-bottom: 2px solid #ddd; }
+      .courses .left-panel h1 span.count {
+        display: inline-block;
+        border-radius: 50px;
+        padding: 5px;
+        float: right;
+        background: #d9534f;
+        color: #fff;
+        font-size: 14px;
+        font-weight: bold;
+        display: none; }
 
 /* main menu css */
 .main-menu {
