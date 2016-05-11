@@ -38,10 +38,10 @@ jQuery(document).ready(function($) {
         // notid = that.attr('data-uid');
 
         notid = {
-            title : that.closest('tr').find('.title').text(),
-            description : that.closest('tr').find('.description').text(),
-            uid : that.attr('data-uid'),
-            status : false
+            title: that.closest('tr').find('.title').text(),
+            description: that.closest('tr').find('.description').text(),
+            uid: that.attr('data-uid'),
+            status: false
         }
         console.log(notid)
 
@@ -54,10 +54,10 @@ jQuery(document).ready(function($) {
     $('.send-notification').click(function(event) {
         // console.log($('.app-users').val())
         var users = $('.app-users').val()
-        var data  = {
-                'users': JSON.stringify(users),
-                'notid': JSON.stringify(notid)
-            }
+        var data = {
+            'users': JSON.stringify(users),
+            'notid': JSON.stringify(notid)
+        }
         $.ajax({
             url: '/admin/send-notification',
             type: 'POST',
@@ -76,8 +76,49 @@ jQuery(document).ready(function($) {
             url: '/get-notification',
             type: 'GET'
         }).done(function(data) {
-            console.log("success",data);
-            $('.notification').append('<p>You have <a href="/get-notification" title="">'+data.notification_status.length+'</a> Notifications</p>')
+            console.log("success", data);
+            $('.notification').append('<p>You have <a href="/get-notification" title="">' + data.notification_status.length + '</a> Notifications</p>')
+        })
+    }
+    if (window.location.pathname === '/courses') {
+        $.ajax({
+            url: '/get-notification',
+            type: 'GET'
+        }).done(function(data) {
+            var unreadcount = 0
+            var nottemplate = ""
+            nottemplate = "<ul class='user-notification'>"
+            data.notification_status.forEach(function(element) {
+                if (!element.status) {
+                    unreadcount++
+                    nottemplate += "<li  class='unread' data-uid=" + element.uid + " data-title=" + JSON.stringify(element.title) + " data-description=" + JSON.stringify(element.description) + ">" + element.title + "</li>"
+                } else {
+                    nottemplate += "<li data-title=" + JSON.stringify(element.title) + " data-description=" + JSON.stringify(element.description) + ">" + element.title + "</li>"
+                }
+            });
+            nottemplate += "</ul>"
+            if (unreadcount) {
+                $('.count').text(unreadcount).show()
+            }
+            $('.left-panel').append(nottemplate)
+
+        })
+        $('body').on('click', '.user-notification li', function(event) {
+            $('#notifmodal #notifmodalLabel').text($(this).text())
+            $('#notifmodal .modal-body').text($(this).data('description'))
+            $('#notifmodal').modal('show')
+            if ($(this).hasClass('unread')) {
+                $.ajax({
+                    url: '/inbox/' + $(this).data('uid') + '',
+                    type: 'POST'
+                }).done(function() {
+                    console.log("success");
+                })
+                $(this).removeClass('unread')
+            }
+        });
+        $('#notifmodal').on('hidden.bs.modal', function() {
+
         })
     }
 

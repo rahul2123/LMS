@@ -89,6 +89,15 @@ module.exports = function Routes() {
                 })
             built.setread(req.session.user_uid, notid)
         })
+
+        app.post('/inbox/:notid',function (req,res) {
+            var notid = req.params.notid
+            built.setread(req.session.user_uid, notid)
+            .then(function () {
+             res.send('ok')
+            })
+
+        })
     };
     Routes.beforePublish = function(data, next) {
         next();
