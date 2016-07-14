@@ -11,7 +11,8 @@ jQuery(document).ready(function($) {
             type: 'POST',
             data: notification
         }).done(function(notify) {
-            console.log(notify)
+            // console.log(notify)
+            window.location = "/admin/notifications"
         })
     });
     var notid = {}
@@ -43,7 +44,7 @@ jQuery(document).ready(function($) {
             uid: that.attr('data-uid'),
             status: false
         }
-        console.log(notid)
+        // console.log(notid)
 
     });
 
@@ -64,7 +65,7 @@ jQuery(document).ready(function($) {
             data: data,
         })
             .done(function(status) {
-                console.log("success", status);
+                // console.log("success", status);
                 $('#myModal').modal('hide')
                 alert('added notifications to all selected users')
             })
@@ -76,7 +77,7 @@ jQuery(document).ready(function($) {
             url: '/get-notification',
             type: 'GET'
         }).done(function(data) {
-            console.log("success", data);
+            // console.log("success", data);
             $('.notification').append('<p>You have <a href="/get-notification" title="">' + data.notification_status.length + '</a> Notifications</p>')
         })
     }
@@ -85,22 +86,20 @@ jQuery(document).ready(function($) {
             url: '/get-notification',
             type: 'GET'
         }).done(function(data) {
-            var unreadcount = 0
             var nottemplate = ""
             nottemplate = "<ul class='user-notification'>"
             data.notification_status.forEach(function(element) {
                 if (!element.status) {
-                    unreadcount++
                     nottemplate += "<li  class='unread' data-uid=" + element.uid + " data-title=" + JSON.stringify(element.title) + " data-description=" + JSON.stringify(element.description) + ">" + element.title + "</li>"
                 } else {
                     nottemplate += "<li data-title=" + JSON.stringify(element.title) + " data-description=" + JSON.stringify(element.description) + ">" + element.title + "</li>"
                 }
             });
             nottemplate += "</ul>"
-            if (unreadcount) {
-                $('.count').text(unreadcount).show()
-            }
             $('.left-panel').append(nottemplate)
+            if ($('.unread').length > 0) {
+                $('.count').text($('.unread').length).show()
+            }
 
         })
         $('body').on('click', '.user-notification li', function(event) {
@@ -112,7 +111,11 @@ jQuery(document).ready(function($) {
                     url: '/inbox/' + $(this).data('uid') + '',
                     type: 'POST'
                 }).done(function() {
-                    console.log("success");
+                    if ($('.unread').length > 0) {
+                        $('.count').text($('.unread').length)
+                    } else {
+                        $('.count').text(0).hide(0)
+                    }
                 })
                 $(this).removeClass('unread')
             }

@@ -8,12 +8,12 @@ module.exports = exports = {
     ],
     plugins: {
         routes:{
-            apikey:"blt3a3868b97db0c4e9",
-            masterkey:"blte3fc8b51f4021245"
+            apikey:"blt8d05a3a4d0682d55",
+            masterkey:"bltb3e4c81f090a1c81"
         },
         admin:{
-            apikey:"blt3a3868b97db0c4e9",
-            masterkey:"blte3fc8b51f4021245"
+            apikey:"blt8d05a3a4d0682d55",
+            masterkey:"bltb3e4c81f090a1c81"
         }
     },
     contentstack: {
@@ -24,3 +24,6 @@ module.exports = exports = {
         scaffold : false
     }
 };
+
+// blt3a3868b97db0c4e9 previous api key
+// blt3a3868b97db0c4e9
